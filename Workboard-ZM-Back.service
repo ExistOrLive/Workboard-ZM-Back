@@ -1,0 +1,12 @@
+[Unit]
+Description=Workboard-ZM-Back
+After=syslog.target
+
+[Service]
+User=lighthouse
+WorkingDirectory=/home/lighthouse/Workboard-ZM-Back
+ExecStart=/usr/bin/java -jar target/demo-0.0.1-SNAPSHOT.jar
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
